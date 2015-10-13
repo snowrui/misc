@@ -1,0 +1,13 @@
+tests:
+  -
+    name: abc
+    url: http://httpbin.org/get?foo=bar&bar=baz
+    post: {args:{bar: baz, foo: bar}}
+    response:
+      json: {args:{bar: baa, foo: bar}}
+  -
+    name: abc
+    url: http://httpbin.org/get?foo=bar&bar=baz
+    post: {args:{bar: baz, foo: bar}}
+    response:
+      json: {args:{bar: baz}}
